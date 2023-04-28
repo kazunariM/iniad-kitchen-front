@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import styles from '@/styles/article.module.scss'
 import Header from '@/components/header'
 import { useRouter } from 'next/router'
+import GetArticle from '@/components/article'
 
 
 export default function Detail() {
@@ -14,7 +14,7 @@ export default function Detail() {
             </Head>
             <Header />
             <main>
-                <p>{article_id}</p>
+                {article_id && GetArticle( article_id[0] )}
             </main>
         </>
     )

@@ -1,4 +1,5 @@
 import axios from 'axios'
+import styles from '@/styles/article.module.scss'
 import { useEffect, useState } from 'react'
 
 const instance = axios.create({
@@ -9,15 +10,28 @@ const instance = axios.create({
 
 type Props = { article_id: string }
 
-export default function GetArticle(props:Props){
+export default function GetArticle(article_id: string){
     const [article, setArticle] = useState<any | null>(null)
 
     useEffect(() => {
-        async function fetchData() {
-            const res = await instance.get(`/article/${props.article_id}/`)
+        /*async function fetchData() {
+            const res = await instance.get(`/article/${article_id}/`)
             setArticle(res.data)
         }
 
-        fetchData()
+        fetchData()*/
+        setArticle({title:"test_title",event_day:"2023/4/28",text:"<p>sssssssssssssssssssssssssssssssssssss</p>"})
     }, [])
+
+    if (article){
+        return(
+            <article>
+                <div>
+                    <h3>{article.title}</h3>
+                    <p>{article.event_day}</p>
+                    <div dangerouslySetInnerHTML={{__html:article.text}}></div>
+                </div>
+            </article>
+        )
+    }
 }
