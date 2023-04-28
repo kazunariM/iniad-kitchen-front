@@ -20,16 +20,19 @@ export default function GetArticle(article_id: string){
         }
 
         fetchData()*/
-        setArticle({title:"test_title",event_day:"2023/4/28",text:"<p>sssssssssssssssssssssssssssssssssssss</p>"})
+        setArticle({title:"test_title",event_day:"2023/4/28",text:"<p>sssssssssssssssssssssssssssssssssssss。aaaaaaaaaaaaaaaaaテストテスト</p>"})
     }, [])
 
     if (article){
         return(
             <article>
-                <div>
-                    <h3>{article.title}</h3>
-                    <p>{article.event_day}</p>
-                    <div dangerouslySetInnerHTML={{__html:article.text}}></div>
+                <div className={styles.article}>
+                    <div className={styles.article_header}>
+                      <h3>{article.title}</h3>
+                      <small>{article.event_day}</small>  
+                    </div>
+                    
+                    <div dangerouslySetInnerHTML={{__html:article.text}} className={styles.article_body}></div>
                 </div>
             </article>
         )
