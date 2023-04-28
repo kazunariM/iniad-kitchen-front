@@ -27,7 +27,7 @@ export default function GetArticles() {
             items.push(
                 <article>
                     <div className={styles.article_header}>
-                        <h3>{data.title}</h3>
+                        <h3>{"> "}{data.title}</h3>
                         <small>{data.event_day}</small>
                     </div>
                     <div dangerouslySetInnerHTML={{__html: data.text}}></div>
