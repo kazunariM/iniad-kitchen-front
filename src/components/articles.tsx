@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import styles from '@/styles/Home.module.scss'
 
 const instance = axios.create({
@@ -27,7 +28,7 @@ export default function GetArticles() {
             items.push(
                 <article>
                     <div className={styles.article_header}>
-                        <h3>{"> "}{data.title}</h3>
+                        <h3><Link href={`/detail/${data.uuid}/`}>{"> "}{data.title}</Link></h3>
                         <small>{data.event_day}</small>
                     </div>
                     <div dangerouslySetInnerHTML={{__html: data.text}}></div>

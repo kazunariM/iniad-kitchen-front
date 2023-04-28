@@ -1,6 +1,7 @@
 import axios from 'axios'
 import styles from '@/styles/article.module.scss'
 import { useEffect, useState } from 'react'
+import Router from 'next/router';
 
 const instance = axios.create({
     baseURL: process.env.NODE_ENV === 'production'
@@ -14,14 +15,18 @@ export default function GetArticle(article_id: string){
     const [article, setArticle] = useState<any | null>(null)
 
     useEffect(() => {
-        /*async function fetchData() {
-            const res = await instance.get(`/article/${article_id}/`)
-            setArticle(res.data)
+        async function fetchData() {
+            try {
+                const res = await instance.get(`/article/${article_id}/`)
+                setArticle(res.data)
+            } catch (error) {
+                Router.push('/')
+            }
         }
 
-        fetchData()*/
-        setArticle({title:"test_title",event_day:"2023/4/28",text:"<p>sssssssssssssssssssssssssssssssssssss。aaaaaaaaaaaaaaaaaテストテスト</p>"})
-    }, [])
+        fetchData()
+        // setArticle({title:"test_title",event_day:"2023/4/28",text:"<p>sssssssssssssssssssssssssssssssssssss。aaaaaaaaaaaaaaaaaテストテスト</p>"})
+    }, [article_id])
 
     if (article){
         return(
