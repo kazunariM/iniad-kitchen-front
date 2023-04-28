@@ -14,7 +14,7 @@ body {
 
 header {
   nav {
-    margin: 0;
+    margin: 0.5em 0 ;
 
 
     h1 {
@@ -52,7 +52,7 @@ main {
   border-radius: 16px;
 
   section {
-    margin: 2em 0;
+    margin: 2em 1em;
 
     h2 {
       font-family: 'M PLUS 1p', sans-serif;
@@ -71,8 +71,11 @@ main {
     table {
       tbody {
         tr {
+          margin: 10px;
           th {
             vertical-align: initial;
+            text-align: left;
+            
           }
 
           td {
@@ -88,6 +91,17 @@ main {
     }
   }
 }
+
+section > :not(h2){
+  width: 95%;
+  margin: auto;
+}
+
+.subscribe {
+  width: 80%;
+  margin: auto;
+}
+
 
 footer {
   p {

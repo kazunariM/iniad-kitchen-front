@@ -12,7 +12,10 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <p>複数の技術を使いそれらを組み合わせて創作活動を行うINIAD公認サークルです。</p>
+        <section>
+          <p>複数の技術を使いそれらを組み合わせて創作活動を行う<br></br>INIAD公認サークルです。</p>
+        </section>
+        
         <section>
           <h2>紹介動画</h2>
           <div className={styles.youtube}>
@@ -27,7 +30,7 @@ export default function Home() {
         </section>
         <section>
           <h2>サークルについて</h2>
-          <table>
+          <table className={styles.section_body}>
             <tbody>
               <tr>
                 <th>活動日</th>
@@ -55,8 +58,10 @@ export default function Home() {
         </section>
         <section>
           <h2>INIAD kITchenに参加する</h2>
-          <p><a href="https://forms.gle/nbtAaZA5rcr6ThGa6" target={'_blank'}>こちら</a>のフォームから参加できます。</p>
-          <p>フォームの回答にはINIADアカウントでのログインが必要です。</p>
+          <div className={styles.section}>
+            <p><a href="https://forms.gle/nbtAaZA5rcr6ThGa6" target={'_blank'}>こちら</a>のフォームから参加できます。</p>
+            <p>フォームの回答にはINIADアカウントでのログインが必要です。</p>
+          </div>
         </section>
       </main>
       <footer>

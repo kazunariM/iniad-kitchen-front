@@ -47,5 +47,17 @@
 
     h3 {
         margin: 0;
+        color: rgb(216, 97, 0);
+        text-decoration: none;
     }
+
+    h3:hover {
+        opacity: 0.6;
+        filter: brightness(110%);
+    }
+}
+
+.subscribe {
+  width: 80%;
+  margin: auto;
 }
