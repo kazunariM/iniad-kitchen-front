@@ -6,6 +6,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return <>
     <Head>
         <link rel="icon" type="image/png" href="/kITchen.png" />
+        <title key="title">INIAD kITchen</title>
         <meta property="og:type" content="article" />
         <meta property="og:title" content="INIADサークル INIAD kITchen" key="og_title" />
         <meta property="og:description" content="INIAD公認サークル「INIAD kITchen」のホームページです。" key="og_description" />

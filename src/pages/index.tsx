@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>INIAD kITchen</title>
+        <title key="title">INIAD kITchen</title>
       </Head>
       <Header />
       <main>

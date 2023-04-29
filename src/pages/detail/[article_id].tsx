@@ -27,6 +27,7 @@ export default function Detail(props: Props) {
         <>
             <Head>
                 {props.data.OGP_title && <meta property="og:title" content={props.data.OGP_title} key="og_title" />}
+                {props.data.OGP_title && <title key="title">{props.data.OGP_title} | INIAD kITchen</title>}
                 {props.data.OGP_description && <meta property="og:description" content={props.data.OGP_description} key="og_description" />}
                 <meta property="og:url" content={"https://iniad-kitchen.com/detail/"+props.data.uuid} key="og_url" />
                 {props.data.OGP_image && <meta property="og:image" content={props.data.OGP_image} key="og_image" />}
