@@ -3,7 +3,7 @@ import { ChangeEvent, useState } from 'react'
 
 export default function StaffArticleList() {
     const [title, setTitle] = useState<string | null>(null)
-    const [date, setDate] = useState<string | null>(null)
+    const [event_day, setEventDay] = useState<string | null>(null)
     const [leadSentence, setLeadSentence] = useState<string | null>(null)
     const [body, setBody] = useState<string | null>(null)
     const [OGPTitle, setOGPTitle] = useState<string | null>(null)
@@ -16,7 +16,7 @@ export default function StaffArticleList() {
     }
 
     const changeDate = (e: ChangeEvent<HTMLInputElement>) => {
-        setDate(e.target.value)
+        setEventDay(e.target.value)
     }
 
     const changeLeadSentence = (e: ChangeEvent<HTMLInputElement>) => {
@@ -56,7 +56,7 @@ export default function StaffArticleList() {
             </section>
             <section>
                 <label htmlFor="date">日付</label><input type="date" placeholder="YYYY/MM/DD 記事に記載する日時" name="date" onChange={changeDate}/>
-                <p>{date}</p>
+                <p>{event_day}</p>
             </section>
             <section>
                 <label htmlFor="leadSentence">リード文</label><input type="text" placeholder="活動記録一覧にも載せる本文部分" name="leadSentence" onChange={changeLeadSentence} />
