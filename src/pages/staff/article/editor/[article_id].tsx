@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { ChangeEvent, useState } from 'react'
 
-export default function StaffArticleList() {
+export default function StaffArticleEditor() {
     const [title, setTitle] = useState<string | null>(null)
     const [event_day, setEventDay] = useState<string | null>(null)
     const [leadSentence, setLeadSentence] = useState<string | null>(null)
