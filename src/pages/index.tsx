@@ -19,7 +19,7 @@ export default function Home() {
         <section>
           <h2>紹介動画</h2>
           <div className={styles.youtube}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/xIMPU2tiaxw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wXo2lUNqtYs" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           </div>
         </section>
         <section>
@@ -34,7 +34,7 @@ export default function Home() {
             <tbody>
               <tr>
                 <th>活動日</th>
-                <td>不定期・INIAD-FES準備期間は活動多め</td>
+                <td>不定期<br />赤羽台祭期間は活動多め</td>
               </tr>
               <tr>
                 <th>活動場所</th>
@@ -51,7 +51,7 @@ export default function Home() {
               </tr>
               <tr>
                 <th>連絡先</th>
-                <td><a href="mailto:contact@iniad-kitchen.com">contact@iniad-kitchen.com</a></td>
+                <td><a href="mailto:contact@iniad-kitchen.com">iniad.kitchen@gmail.com</a></td>
               </tr>
             </tbody>
           </table>
@@ -65,7 +65,7 @@ export default function Home() {
         </section>
       </main>
       <footer>
-        <p><small>© 2021-2023 INIAD kITchen</small></p>
+        <p><small>© 2021- INIAD kITchen</small></p>
       </footer>
     </>
   )

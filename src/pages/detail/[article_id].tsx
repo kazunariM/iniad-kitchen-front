@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '@/components/header'
+import Footer from '@/components/footer'
 import { useRouter } from 'next/router'
 import GetArticle from '@/components/article'
 import axios from 'axios'
@@ -37,6 +38,7 @@ export default function Detail(props: Props) {
             <main>
                 {article_id && GetArticle( article_id )}
             </main>
+            <Footer />
         </>
     )
 }
